@@ -31,6 +31,7 @@ const portfolioCards = document.querySelectorAll(dataItem);
 /* Modal */
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
+const modalClass = "modal";
 
 const loadTheme = () => {
   if (currentTheme) {
@@ -106,6 +107,19 @@ Array.from(closeModal).forEach((elem) => {
     const parent = this.closest(`#${modalId}`);
     parent.classList.remove(isVisible);
   });
+});
+
+document.addEventListener("click", (e) => {
+  const isAnchorTag = e.target.matches("a");
+  const visibleModal = document.querySelector(`.${modalClass}.${isVisible}`);
+
+  if (isAnchorTag) {
+    e.preventDefault();
+  }
+
+  if (e.target === visibleModal) {
+    visibleModal.classList.remove(isVisible);
+  }
 });
 
 document.addEventListener("keyup", (e) => {
