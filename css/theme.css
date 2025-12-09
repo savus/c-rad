@@ -17,10 +17,10 @@
 
 [data-theme="dark"] {
   --bg: #171a23;
-  --bg-panel: #f1f1f1;
+  --bg-panel: #313131;
   --color-headings: #fff;
   --color-text-opacity: rgba(255, 255, 255, 0.7);
   --color-text: #fff;
-  --color-text-base: #161c2d;
+  --color-text-base: #fff;
   --border: #ced4da;
 }
