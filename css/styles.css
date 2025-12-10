@@ -233,7 +233,7 @@
 }
 
 .portfolio-card .card-popup-box .title {
-  color: var(--color-text-base);
+  color: var(--color-text-headings);
   font-size: 0.8125rem;
   line-height: 1.63;
   letter-spacing: 1.63px;
@@ -277,6 +277,57 @@ section.reviews {
 
 .review-preview img {
   width: 100%;
+}
+
+.review-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 250px;
+  margin: 200px 0;
+  pointer-events: none;
+}
+
+.review-item {
+  background-color: var(--bg-panel);
+  color: var(--color-text-base);
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 24px;
+  width: 100%;
+  box-shadow: 0 22px 34px rgba(22, 28, 45, 0.8);
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.review-item .review-text {
+  padding-bottom: 2.5rem;
+  text-align: left;
+}
+
+.review-item .review-author {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.review-item .avatar {
+  --img-size: 46px;
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.review-item .details {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #6b6b6b;
 }
 
 .slide-ctrl-container {
