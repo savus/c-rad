@@ -299,6 +299,26 @@ section.reviews {
   box-shadow: 0 22px 34px rgba(22, 28, 45, 0.8);
   transition: all 0.3s ease-in-out;
   position: absolute;
+  opacity: 0;
+}
+
+.review-item.active {
+  transform: translateY(-10%);
+  z-index: 10;
+  opacity: 1;
+}
+
+.review-item.prev,
+.review-item.next {
+  opacity: 0.5;
+}
+
+.review-item.prev {
+  transform: translateX(-75%);
+}
+
+.review-item.next {
+  transform: translateX(75%);
 }
 
 .review-item .review-text {
