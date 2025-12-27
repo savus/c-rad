@@ -122,6 +122,18 @@ document.addEventListener("click", (e) => {
   }
 });
 
+const elmsDisplayed = getComputedStyle(root).getPropertyValue(
+  "--marquee-elms-displayed"
+);
+
+const marqueeContent = document.querySelector(".marquee-content");
+
+for (let i = 0; i < elmsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+root.style.setProperty("--marquee-elm", marqueeContent.children.length);
+
 document.addEventListener("keyup", (e) => {
   const keyCode = e.key;
   switch (keyCode) {
